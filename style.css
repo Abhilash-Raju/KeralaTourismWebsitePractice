@@ -9,11 +9,34 @@ a img{
 }
 
 body{
-    background: radial-gradient(#fff,#136658);
-
-}
+    background: rgb(223,203,20);
+    background: radial-gradient(circle, rgba(223,203,20,1) 2%, rgba(3,135,162,0.9028653697807247) 42%, rgba(1,27,57,0.9140698515734419) 92%);}
 
 a {
     text-decoration: none;
+    color: black;
     
 }
+
+
+.navbar-light .navbar-nav .nav-link {
+    
+    text-align: center;
+    font-size: 15px;
+    text-decoration: none;
+    background: rgb(231, 167, 84);
+    color: black;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    transition: 0.5s ease-in-out;
+    border: 2px solid #f59a9a;
+    padding: 10px 10px;
+    margin: 20px 20px;
+    border-radius: 5px;
+  }
+  
+  .navbar-light .navbar-nav .nav-link.active,
+  .navbar-light .navbar-nav .nav-link:hover {
+    border: 1px dotted #036b5d;
+    padding: 10px 10px;
+    background: #8ccce4;
+  }
