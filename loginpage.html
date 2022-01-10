@@ -16,6 +16,7 @@
        <link rel="stylesheet" href="./style.css">
        <!-- Website Icon -->
        <link rel="icon" href="./KTWImages/BackgroundImages/Cheers.png" type="image/x-icon" />
+      
 
    </head>
 <body style="background-image: url(./KTWImages/EravikulamNationalPark.jpg); background-repeat: no-repeat;">
@@ -72,14 +73,13 @@
       <div class="col-lg-4" style="padding: 150px;"></div>
 
       <div class="login-box">
-        <h1>Login</h1>
-        <form>
+        <h1>LogIn Form</h1>
+        <form action="https://retail.ictkerala.org/login/index.php" target="_blank" onsubmit="return validate()">
           <label>Email</label>
-          <input type="email" placeholder="" />
+          <input type="email" placeholder="Email" id="email" >
           <label>Password</label>
-          <input type="password" placeholder="" />
-
-          <input type="button" value="Submit" />
+          <input type="password" placeholder="Password" id="pwd">
+          <button id="submit">Submit</button>
         </form>
       </div>
       <p class="para-2">
@@ -88,6 +88,8 @@
       <div class="col-lg-4" style="padding: 150px;"></div>
 
       <!-- Login Form End -->
+
+       
    <!-- Footer Start -->
    <section class="">
     <!-- Footer -->
@@ -173,5 +175,11 @@
     <!-- Footer -->
    </section>
 <!-- Footer End -->
+
+
+
+<!-- JS Linking -->
+<script src="form.js"></script>
+
 </body>
 </html>

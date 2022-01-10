@@ -16,10 +16,11 @@
         <link rel="stylesheet" href="./style.css">
         <!-- Website Icon -->
         <link rel="icon" href="./KTWImages/BackgroundImages/Cheers.png" type="image/x-icon" />
+      
         
     
     </head>
-<body  >
+<body style="background-image: url(./KTWImages/Pakshipathalam-Bird-Sanctuary.jpg); background-repeat: no-repeat; background-size: cover; background-blend-mode:soft-light ;">
        <!-- Navigation Bar Start -->
        <nav class="navbar navbar-expand-lg navbar-light fixed-top">
         <div class="container-fluid">
@@ -70,42 +71,42 @@
       </nav>
       <!-- /Navigation Bar End -->
     <!-- Sign Up Form Start -->
-<div class="container-fluid" style="background-image: url(./KTWImages/Pakshipathalam-Bird-Sanctuary.jpg); background-repeat: no-repeat; background-size: cover; background-blend-mode:soft-light ;">
+        <div class="container-fluid">
 
-  <div class="col-lg-4" style="padding-top: 90px; "></div>
-          <!-- Form Start -->
-          <div class="signup-box">
-            <h1>Sign Up</h1>
-            <h4>It's free and will take a few minutes</h4>
-            <form>
-              <label>First Name</label>
-              <input type="text" placeholder="" />
-              <label>Last Name</label>
-              <input type="text" placeholder="" />
-              <label>Email</label>
-              <input type="email" placeholder="" />
-              <label>Password</label>
-              <input type="password" placeholder="" />
-              <label>Confirm Password</label>
-              <input type="password" placeholder="" />
-              <input type="button" value="Submit" />
-            </form>
-            <p>
-              By clicking the Sign Up button,you agree to our <br />
-              <a href="#">Terms and Condition</a> and <a href="#">Policy Privacy</a>
-            </p>
-          </div>
-          <p class="para-2">
-            Already have an account? <a href="/loginpage.html">Login here</a>
-          </p>
-          <div class="col-lg-4" style="padding-bottom: 90px; "></div>
+          <div class="col-lg-4" style="padding-top: 200px; "></div>
+                  <!-- Form Start -->
+                  <div class="signup-box">
+                    <h1>Sign Up</h1>
+                    <h4>It's free and will take a few minutes</h4>
+                    <form action="https://retail.ictkerala.org/login/index.php" target="_blank" onsubmit="return validate2()">
+                      <label>First Name</label>
+                      <input type="text" placeholder="First Name" />
+                      <label>Last Name</label>
+                      <input type="text" placeholder="Last Name" />
+                      <label>Email</label>
+                      <input type="email" placeholder="Email" id="email1"/>
+                      <label>Password</label>
+                      <input type="password" placeholder="Set your Password" id="pwd1" />
+                      <label>Confirm Password</label>
+                      <input type="password" placeholder="Re-enter the password" id="pwd2"/>
+                      <button id="submit">Submit</button>
+                    </form>
+                    <p>
+                      By clicking the Sign Up button,you agree to our <br />
+                      <a href="#">Terms and Condition</a> and <a href="#">Policy Privacy</a>
+                    </p>
+                  </div>
+                  <p class="para-2">
+                    Already have an account? <a href="/loginpage.html">Login here</a>
+                  </p>
+                  <div class="col-lg-4" style="padding-bottom: 90px; "></div>
 
-</div>
-          
-          <!-- /Form End -->
-          <hr class="my-5" />
+        </div>
+                  
+                  <!-- /Form End -->
+                  <hr class="my-5" />
 
-    <!-- Sign Up Form End -->
+            <!-- Sign Up Form End -->
 
  <!-- Footer Start -->
  <section class="">
@@ -192,5 +193,7 @@
   <!-- Footer -->
  </section>
   <!-- Footer End -->
+<!-- JS Linking -->
+<script src="form.js"></script>
 </body>
 </html>
