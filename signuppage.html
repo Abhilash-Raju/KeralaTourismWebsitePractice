@@ -1,28 +1,22 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-        <meta http-equiv="x-ua-compatible" content="ie=edge" />
-        <title>
-            Sign Up Page
-        </title>
-        <!-- jquery and popper script command -->
-        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>
-        <!-- Bootstrap sytlesheet -->
-        <link rel="stylesheet" href="./bootstrap.min.css">
-        <!-- My personal stylesheet -->
-        <link rel="stylesheet" href="./style.css">
-        <!-- Website Icon -->
-        <link rel="icon" href="./KTWImages/BackgroundImages/Cheers.png" type="image/x-icon" />
-      
-        
-    
-    </head>
-<body style="background-image: url(./KTWImages/Pakshipathalam-Bird-Sanctuary.jpg); background-repeat: no-repeat; background-size: cover; background-blend-mode:soft-light ;">
-       <!-- Navigation Bar Start -->
-       <nav class="navbar navbar-expand-lg navbar-light fixed-top">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Validation</title>
+    <!-- jquery and popper script command -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>
+    <!-- Fontawesome stylesheet -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <!-- Bootstrap sytlesheet -->
+    <link rel="stylesheet" href="./bootstrap.min.css">
+    <link rel="stylesheet" href="form.css">
+</head>
+<body>
+     <!-- Navigation Bar Start -->
+     <nav class="navbar navbar-expand-lg navbar-light fixed-top">
         <div class="container-fluid">
             <a class="navbar-brand" href="./index.html">
                 <img src="./KTWImages/BackgroundImages/Cheers.gif" alt="Logo" width="80" height="80">
@@ -67,119 +61,159 @@
                   </li>
                   </ul>
               </div>
-          </div>
+        </div>
       </nav>
       <!-- /Navigation Bar End -->
-    <!-- Sign Up Form Start -->
-        <div class="container-fluid">
 
-          <div class="col-lg-4" style="padding-top: 200px; "></div>
-                  <!-- Form Start -->
-                  <div class="signup-box">
-                    <h1>Sign Up</h1>
-                    <h4>It's free and will take a few minutes</h4>
-                    <form action="https://retail.ictkerala.org/login/index.php" target="_blank" onsubmit="return validate()">
-                      <label>First Name</label>
-                      <input type="text" placeholder="First Name" required/>
-                      <label>Last Name</label>
-                      <input type="text" placeholder="Last Name" required/>
-                      <label>Email</label>
-                      <input type="email" placeholder="Email" id="email1" required/>
-                      <label>Password</label>
-                      <input type="password" placeholder="Set your Password" id="pwd1"  required/>
-                      <label>Confirm Password</label>
-                      <input type="password" placeholder="Re-enter the password" id="pwd2" required/>
-                      <button id="submit">Submit</button>
-                    </form>
-                    <p style="text-align: center;
-                    padding-top: 20px;
-                    font-size: 15px;">
-                      By clicking the Submit button,you agree to our <br />
-                      <a href="#">Terms and Condition</a> and <a href="#">Policy Privacy</a>
+      <!-- Form Start -->
+      <div class="container text-center text-md-start mt-5" style="padding-top: 200px; "></div>
+
+
+        <div class="container text-center text-md-start mt-5" id="myform">
+                <h2>Sign Up</h2>
+                <br>
+                <h6>Create your account. It's free and only take a minute.</h6>
+                <form action="https://retail.ictkerala.org/login/index.php" id="form" class="form"  target="_blank">
+                    <div class="flex-container" >
+                        <div class="flex-child form-control">
+                            <label for="firstname">First Name</label>
+                            <input type="text" placeholder="Enter your First Name" id="firstname" autocomplete="off"/>
+                            <i class="fas fa-check-circle"></i>
+                            <i class="fas fa-exclamation-circle"></i>
+                            <small>Error message</small>
+                        </div>
+                        <div class="flex-child form-control">
+                            <label for="lastname">Last Name</label>
+                            <input type="text" placeholder="Enter your Last Name" id="lastname" autocomplete="off" />
+                            <i class="fas fa-check-circle"></i>
+                            <i class="fas fa-exclamation-circle"></i>
+                            <small>Error message</small>
+                        </div>
+                    </div>
+                    <div class="mb-3 form-control">
+                        <label for="Email">Email</label>
+                        <input type="email" placeholder="Enter your Email" id="email" autocomplete="off"/>
+                        <i class="fas fa-check-circle"></i>
+                        <i class="fas fa-exclamation-circle"></i>
+                        <small>Error message</small>
+                    </div>
+                    <div class="mb-3 form-control">
+                        <label for="Phone Number">Phone Number</label>
+                        <input type="tel" placeholder="Phone Number" id="phone" pattern="/(^[7-9]\d{2}-\d{3}-\d{4})|(^[7-9]\d{2}.\d{3}.\d{4})|(^[7-9]\d{2}\s\d{3}\s\d{4})/" autocomplete="off"/>
+                        <i class="fas fa-check-circle"></i>
+                        <i class="fas fa-exclamation-circle"></i>
+                        <small>Error message</small>
+                    </div>
+                    <div class="mb-3 form-control">
+                        <label for="Password">Password</label>
+                        <input type="password" placeholder="Password" id="password" autocomplete="off"/>
+                        <div class="pw-display-toggle-btn">
+                        <i class="fas fa-eye" id ="myEye" ></i>
+                        <i class="fas fa-eye-slash" id ="myEye" ></i>
+                        </div>
+                        <div class="pw-strength">
+                            <span>Weak</span>
+                            <span></span>
+                        </div>
+                        <small>Error message</small>
+                    </div>
+                    <div class="mb-3 form-control">
+                        <label for="Password Confirmation">Confirm Password</label>
+                        <input type="password" placeholder="Re-enter Password" id="password2" autocomplete="off"/>
+                        <div class="pw-display-toggle-btn">
+                            <i class="fas fa-eye" id ="myEye" ></i>
+                            <i class="fas fa-eye-slash" id ="myEye" ></i>
+                        </div>
+                        <small>Error message</small>
+                    </div>
+                    <button type="submit" name="submitButton">Submit</button>
+                </form>
+
+                    <p class="mySignup" style="text-align: center;
+                        font-weight: bolder;">
+                        By clicking the Submit button,you agree to our <br />
+                        <a href="#">Terms and Condition</a> and <a href="#">Policy Privacy</a>
                     </p>
-                  </div>
-                  <p class="para-2" >
-                    Already have an account? <a href="/loginpage.html">Login here</a>
-                  </p>
-                  <div class="col-lg-4" style="padding-bottom: 90px; "></div>
-
+            
+                    <p class="para-2">
+                        Already have an account? <a href="/loginpage.html">Login here</a>
+                    </p>
         </div>
-                  
-                  <!-- /Form End -->
-                  <hr class="my-5" />
+    
+       
+    <div class="col-lg-4" style="padding-bottom: 90px; "></div>
 
-            <!-- Sign Up Form End -->
 
- <!-- Footer Start -->
- <section class="">
-  <!-- Footer -->
-  <footer class="text-center text-white" style="background-color: rgb(45, 90, 105);">
+<!-- Footer Start -->
+<section class="">
+    <!-- Footer -->
+    <footer class="text-center text-white" style="background-color: rgb(45, 90, 105);">
     <!-- Grid container -->
     <br>
     <section class="">
-      <div class="container text-center text-md-start mt-5">
+        <div class="container text-center text-md-start mt-5">
         <!-- Grid row -->
         <div class="row mt-3">
-          <!-- Grid column -->
-          <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
+            <!-- Grid column -->
+            <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
             <!-- Content -->
             <h5 class="text-white fw-bold mb-4">
-              <i class="fas fa-gem me-3"></i>My Kerala Tourism
+                <i class="fas fa-gem me-3"></i>My Kerala Tourism
             </h5>
             <p>
-              Kerala Tourism offer packages for every kind of Kerala tourism plans, whether it is your family, honeymoon, pilgrimage visit, cultural tour, ayurveda package or adventurous trip.
+                Kerala Tourism offer packages for every kind of Kerala tourism plans, whether it is your family, honeymoon, pilgrimage visit, cultural tour, ayurveda package or adventurous trip.
             </p>
-          </div>
-          <!-- Grid column -->
-          <!-- Grid column -->
-          <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
+            </div>
+            <!-- Grid column -->
+            <!-- Grid column -->
+            <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
             <!-- Links -->
             <h5 class="text fw-bold mb-4">
-              Useful links
+                Useful links
             </h5>
             <p>
-              <a href="./index.html" class="text-reset" style="text-decoration: none;">Home</a>
+                <a href="./index.html" class="text-reset" style="text-decoration: none;">Home</a>
             </p>
             <p>
-              <a href="./loginpage.html" class="text-reset"  style="text-decoration: none;">Login</a>
+                <a href="./loginpage.html" class="text-reset"  style="text-decoration: none;">Login</a>
             </p>
             <p>
-              <a href="./photogallery.html" class="text-reset" style="text-decoration: none;">Photo Gallery</a>
+                <a href="./photogallery.html" class="text-reset" style="text-decoration: none;">Photo Gallery</a>
             </p>
             
             
-             
-          </div>
-          <!-- Grid column -->
-  
-          <!-- Grid column -->
-          <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
+            
+            </div>
+            <!-- Grid column -->
+    
+            <!-- Grid column -->
+            <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
             <!-- Links -->
             <h5 class="text fw-bold mb-4">
                 <a href="#" class="text-reset" style="text-decoration: none;">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-arrow-up-square-fill" viewBox="0 0 16 16">
-                      <path d="M2 16a2 2 0 0 1-2-2V2a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H2zm6.5-4.5V5.707l2.146 2.147a.5.5 0 0 0 .708-.708l-3-3a.5.5 0 0 0-.708 0l-3 3a.5.5 0 1 0 .708.708L7.5 5.707V11.5a.5.5 0 0 0 1 0z"/>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-arrow-up-square-fill" viewBox="0 0 16 16">
+                        <path d="M2 16a2 2 0 0 1-2-2V2a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H2zm6.5-4.5V5.707l2.146 2.147a.5.5 0 0 0 .708-.708l-3-3a.5.5 0 0 0-.708 0l-3 3a.5.5 0 1 0 .708.708L7.5 5.707V11.5a.5.5 0 0 0 1 0z"/>
                     </svg>
-                  Back to Top
+                    Back to Top
                 </a>
-             </h5>
+            </h5>
             
-          </div>
-          <!-- Grid column -->
+            </div>
+            <!-- Grid column -->
         </div>
         <!-- Grid row -->
-      </div>
-      </section>
+        </div>
+        </section>
     <div class="container p-4 pb-0">
-      <!-- Section: CTA -->
-      <section class="">
+        <!-- Section: CTA -->
+        <section class="">
         <p class="d-flex justify-content-center align-items-center">
-          <span class="me-3">Register for free</span>
-          <a target="_blank" class="btn btn-outline-light btn-lg m-2" href="./signuppage.html"
+            <span class="me-3">Register for free</span>
+            <a target="_blank" class="btn btn-outline-light btn-lg m-2" href="./signuppage.html"
                 role="button" target="_blank">Sign Up!</a>
         </p>
-      </section>
-      <!-- Section: CTA -->
+        </section>
+        <!-- Section: CTA -->
     </div>
 
     
@@ -187,15 +221,14 @@
 
     <!-- Copyright -->
     <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
-      © 2022 Copyright:
-      <a class="text-white" href="./index.html">MyKeralaTourism.com</a>
+        © 2022 Copyright:
+        <a class="text-white" href="./index.html">MyKeralaTourism.com</a>
     </div>
     <!-- Copyright -->
-  </footer>
-  <!-- Footer -->
- </section>
-  <!-- Footer End -->
-<!-- JS Linking -->
-<script src="form.js"></script>
+    </footer>
+    <!-- Footer -->
+</section>
+<!-- Footer End -->
+    <script src="form.js"></script>
 </body>
 </html>
