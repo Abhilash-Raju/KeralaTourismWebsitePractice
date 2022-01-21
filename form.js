@@ -105,7 +105,13 @@ function checkInputs() {
 		setErrorFor(password2, 'Re-enter correct password. Password cannot be blank');
 	} else if(passwordValue !== password2Value) {
 		setErrorFor(password2, 'Password does not match');
-	} else{
+	} else if(password.value.match(space)) 
+	{
+		setErrorFor(password, 'Remove spaces');
+	} else if(passwordValue !=8) {
+		setErrorFor(password, 'Atleast 8 characters are required');
+	}  
+	else{
 		setSuccessFor(password2);
 	}
 }
